@@ -197,7 +197,7 @@ $('document').ready(function(){
 		$('#b77').animate({top:240, left: vw+250},500);
 		$('.balloons').css('opacity','0.9');
 		$('.balloons h2').fadeIn(3000);
-		$(this).fadeOut('slow').delay(2000).promise().done(function(){
+		$(this).fadeOut('slow').delay(1000).promise().done(function(){
 			$('#story').fadeIn('slow');
 		});
 	});
@@ -211,12 +211,13 @@ $('document').ready(function(){
 		var i;
 
 		function msgLoop (i) {
-			$("p:nth-child("+i+")").fadeOut('slow').delay(1000).promise().done(function(){
+			$("p:nth-child("+i+")").fadeOut('slow').delay(200).promise().done(function(){
 			i=i+1;
-			$("p:nth-child("+i+")").fadeIn('slow').delay(1000);
+			$("p:nth-child("+i+")").fadeIn('slow').delay(200);
 			if(i==50){
 				$("p:nth-child(49)").fadeOut('slow').promise().done(function () {
 					$('.cake').fadeIn('fast');
+					$('#pray').fadeIn('slow');
 				});
 				
 			}
@@ -229,8 +230,20 @@ $('document').ready(function(){
 		}
 		
 		msgLoop(0);
-		
 	});
+
+	$('#pray').click(function(){
+		$(this).fadeOut('slow').delay(3000).promise().done(function(){
+			$('#blow_candle').fadeIn('slow');
+		});
+	})
+
+	$('#blow_candle').click(function(){
+		$('.fuego').fadeOut('slow');
+		$(this).fadeOut('slow').delay(1000).promise().done(function(){
+			$('#blow_candle2').fadeIn('slow');
+		});
+	})
 });
 
 

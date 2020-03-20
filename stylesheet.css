@@ -1260,7 +1260,7 @@ audio {
 	bottom: 0;
 	padding:10px 0px 10px 0px;
 }
-#play1, #play2, #play3, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story {
+#play1, #play2, #play3, #bannar_coming, #balloons_flying,#cake_fadein,#light_candle,#wish_message,#story, #pray, #blow_candle, #blow_candle2 {
 	display: none;
 }
 
